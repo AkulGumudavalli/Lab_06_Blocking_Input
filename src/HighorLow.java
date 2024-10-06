@@ -9,18 +9,19 @@ public class HighorLow {
         boolean gotten = false;
         do{
             System.out.println("Guess a number through 1 and 10");
-            if(input.hasNextInt()){
+            if(input.hasNextInt()) {
                 int valueInputted = input.nextInt();
-                if(valueInputted < val){
+                if (valueInputted < val) {
                     System.out.println("Your input was less than the value");
-                }
-                else if(valueInputted > val){
+                } else if (valueInputted > val) {
                     System.out.println("Your input was greater than the value");
-                }else{
+                } else {
                     System.out.println("You got the number!!!");
                     gotten = true;
                 }
 
+            }else{
+                System.out.println("WRONG INPUT TYPE :( you inputted '"+input.nextLine()+"' Please re-input >:|");
             }
         }while (!gotten);
 
